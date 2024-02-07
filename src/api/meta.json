@@ -1,0 +1,10 @@
+{
+  "BACKEND": {
+    "HOSTNAME": "localhost",
+    "SECURE_PORT": 8443,
+    "PORT": 8000,
+    "SECURE_PROTOCOL": "https://",
+    "PROTOCOL": "http://",
+    "API_PATH": "api/"
+  }
+}

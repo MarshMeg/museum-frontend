@@ -1,0 +1,14 @@
+.footer__contact {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    a {
+        height: 50px;
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
