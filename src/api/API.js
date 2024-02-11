@@ -1,9 +1,9 @@
-import META from "./meta.json"
+import metadata from "./meta.json"
 
 export default class API {
   constructor(
-    is_secure = false,
-    config_file_path = './meta.json'
+    is_secure = true,
+    config = {}
   ) {
     this.url = localStorage.getItem("backend-url")
     let url_ = localStorage.getItem("backend-url-th")
@@ -11,7 +11,7 @@ export default class API {
       if (!url_) localStorage.setItem("backend-url-th", "1")
 
       let protocol, port
-      let configs = META["BACKEND"]
+      let configs = metadata["BACKEND"]
 
       if (is_secure === true) {
         protocol = configs["SECURE_PROTOCOL"]

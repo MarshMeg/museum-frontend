@@ -19,7 +19,7 @@ export default function Header({ language }) {
         <Link to={ "/"+language+"/items" }>{ titles_map.nav.items }</Link>
       </nav>
       <div className="header__user">
-        <Account language={language} titles_map={ titles_map.account } />
+        
       </div>
     </header>
   )

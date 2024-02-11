@@ -1,8 +1,8 @@
 {
   "BACKEND": {
-    "HOSTNAME": "localhost",
-    "SECURE_PORT": 8443,
-    "PORT": 8000,
+    "HOSTNAME": "dimasik911.pythonanywhere.com",
+    "SECURE_PORT": 443,
+    "PORT": 80,
     "SECURE_PROTOCOL": "https://",
     "PROTOCOL": "http://",
     "API_PATH": "api/"

@@ -30,6 +30,6 @@ export default class AccountAPI extends API {
     else body = {"email": email, "password": password}
     let req = this.request("login/", "POST", body)
 
-    alert(req)
+
   }
 }
