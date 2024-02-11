@@ -12,18 +12,20 @@ export default class DataAPI extends API {
   get_contacts() {
     let req = this.request("contacts/")
 
-    if (req.status === 200) {
-      return JSON.parse(req.response)["contacts"]
+    if (typeof req === "object") return req.contacts
+    if (typeof req === "string") {
+      console.error(req)
+      return []
     }
-    return []
   }
 
   get_items() {
     let req = this.request("items/")
 
-    if (req.status === 200) {
-      return JSON.parse(req.response)["items"]
+    if (typeof req === "object") return req.items
+    if (typeof req === "string") {
+      console.error(req)
+      return []
     }
-    return []
   }
 }

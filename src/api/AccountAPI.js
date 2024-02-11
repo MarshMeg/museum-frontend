@@ -14,23 +14,22 @@ export default class AccountAPI extends API {
     let req = this.request("status/")
 
     // приём данных из запроса
-    if (req.status === 200) return JSON.parse(req.response).username
-
-    if (req.status === 401) return "ERR401"
-
-    console.error(`Error: ${req.response.status()}`)
-    return null
+    if (typeof req === "object") return req.username
+    if (typeof req === "string") {
+      console.log(req)
+      return null
+    }
   }
 
-  // logout() {
-  //     let req = new XMLHttpRequest()
-  //     req.open('POST', `${this.url}logout/`)
-  //     req.send()
-  //
-  //
-  // }
-  //
-  // login(login, password) {
-  //     let req = new XMLHttpRequest()
-  // }
+  login(
+    username = "", email = "",
+    password
+  ) {
+    let body
+    if (username !== "") body = {"username": username, "password": password}
+    else body = {"email": email, "password": password}
+    let req = this.request("login/", "POST", body)
+
+    alert(req)
+  }
 }

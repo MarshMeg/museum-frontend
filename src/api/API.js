@@ -32,10 +32,22 @@ export default class API {
     url, method = "GET",
     body = {}, headers = [""],
   ) {
+    // отправляю запрос к backend-у
     let req = new XMLHttpRequest()
     req.open(method, this.url + url, false)
-    req.send()
 
-    if (method === "GET") return req
+    if (body === {}) req.send()
+    else req.send(JSON.stringify(body))
+
+    // принимаю данные
+    let return_req
+    if (method === "GET")  return_req = true
+    if (method === "POST") return_req = false
+
+    if (req.status === 200) {
+      if (return_req === true) return JSON.parse(req.response)
+      if (return_req === false) return req.status
+    }
+    else if (req.status === 0) return "net::ERR_CONNECTION"
   }
 }

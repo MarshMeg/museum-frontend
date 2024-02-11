@@ -7,6 +7,7 @@ export default function ContactsList({contacts}) {
   const contacts_map = contacts.map(
     (contact) => (
       <Contact
+        key={contact.title}
         url={contact.url}
         img_url={contact.img}
         title={contact.title}

@@ -1,5 +1,5 @@
-import ItemsList from "../../components/main/items_list/ItemsList.jsx"
-import DataAPI from "../../api/DataAPI.js";
+import ItemsList from "../../../components/main/items_list/ItemsList.jsx"
+import DataAPI from "../../../api/DataAPI.js";
 import "./items.css"
 
 export default function ItemsPage({ language }) {
