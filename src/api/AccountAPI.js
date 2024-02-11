@@ -29,7 +29,5 @@ export default class AccountAPI extends API {
     if (username !== "") body = {"username": username, "password": password}
     else body = {"email": email, "password": password}
     let req = this.request("login/", "POST", body)
-
-
   }
 }

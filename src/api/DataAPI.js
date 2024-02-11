@@ -2,8 +2,7 @@ import API from "./API.js";
 
 export default class DataAPI extends API {
   constructor(
-    is_secure = false,
-    config_file_path = './meta.json'
+    is_secure, config_file_path
   ) {
     super(is_secure, config_file_path);
     this.url = this.url + "data/"
