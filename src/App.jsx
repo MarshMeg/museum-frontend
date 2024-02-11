@@ -12,8 +12,7 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path={ "/:lang/*" } element={<BasePage />} />
-        <Route path={ "/admin/*" } element={<Redirect url={ "localhost:8000/admin/" }/>} />
+        <Route index path={ "/:lang/*" } element={<BasePage />} />
         <Route path={ "*" } element={<Navigate to="/ru/main" replace />} />
       </Routes>
     </>
