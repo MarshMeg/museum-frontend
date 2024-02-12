@@ -45,7 +45,14 @@ export default class API {
     if (method === "POST") return_req = false
 
     if (req.status === 200) {
-      if (return_req === true) return JSON.parse(req.response)
+      if (return_req === true) {
+        try {
+          return JSON.parse(req.response)
+        } catch (e) {
+          console.error(e)
+          return {}
+        }
+      }
       if (return_req === false) return req.status
     }
     else if (req.status === 0) return "net::ERR_CONNECTION"
