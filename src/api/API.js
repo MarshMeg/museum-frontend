@@ -49,7 +49,7 @@ export default class API {
         try {
           return JSON.parse(req.response)
         } catch (e) {
-          console.error(e)
+          console.error("`request, not return data (data is null)`")
           return {}
         }
       }
