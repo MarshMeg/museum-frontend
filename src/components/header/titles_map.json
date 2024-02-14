@@ -3,33 +3,18 @@
     "nav": {
       "main": "Главная",
       "items": "Предметы"
-    },
-    "account": {
-      "login": "Вход",
-      "logout": "Выход",
-      "reg": "Регистация"
     }
   },
   "en": {
     "nav": {
       "main": "About",
       "items": "Exhibits"
-    },
-    "account": {
-      "login": "Login",
-      "logout": "Logout",
-      "reg": "Registration"
     }
   },
   "ud": {
     "nav": {
       "main": "Главная",
       "items": "Предметы"
-    },
-    "account": {
-      "login": "Вход",
-      "logout": "Выход",
-      "reg": "Регистация"
     }
   }
 }
