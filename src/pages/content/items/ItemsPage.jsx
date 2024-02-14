@@ -15,7 +15,7 @@ export default function ItemsPage({ language }) {
   }
 
   return (
-    <main>
+    <main id={ "items" }>
       <div className="items">
         <ItemsList items_list={items}/>
       </div>

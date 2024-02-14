@@ -3,33 +3,26 @@
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100%;
-  height: var(--header-base-height);
-
   .header__logo {
       display: flex;
       justify-content: space-between;
       align-content: center;
     
     width: 300px;
+    height: var(--header-base-height);
+
+    img {
+      align-self: flex-start;
+
       height: var(--header-base-height);
+      width: var(--header-base-height);
+      margin: 0 5px;
 
-      img {
-        align-self: flex-start;
-
-        height: var(--header-base-height);
-        width: var(--header-base-height);
-        margin: 0 5px;
-
-        p {
-            align-self: flex-end;
-            margin: auto 0;
-        }
+      p {
+          align-self: flex-end;
+          margin: auto 0;
       }
+    }
   }
 
   .header__navbar {
@@ -57,10 +50,11 @@ header {
 
 @media screen and (max-width: 540px) {
   header {
-    justify-content: center;
-    
     nav {
       margin: 0 1rem;
+      height: var(--header-base-height);
+      
+      align-items: center;
     }
   }
 }

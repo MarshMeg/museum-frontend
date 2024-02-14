@@ -13,7 +13,7 @@ export default function BasePage() {
       <Routes>
         <Route path={ "main" } element={<IndexPage language={ lang } />} />
         <Route path={ "items" } element={<ItemsPage language={ lang } />} />
-        <Route path={ "*" } element={<Navigate to="/ru/main" replace />} />
+        <Route path={ "*" } element={<Navigate to={ "/" + lang + "/main" } replace />} />
       </Routes>
       <Footer language={ lang } />
     </>
