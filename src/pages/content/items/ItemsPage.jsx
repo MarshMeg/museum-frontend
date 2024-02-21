@@ -3,7 +3,8 @@ import DataAPI from "../../../api/DataAPI.js";
 import "./items.css"
 
 export default function ItemsPage({ language }) {
-  let items_ = new DataAPI().get_items()
+  let data_api = new DataAPI()
+  let items_ = data_api.get_items()
 
   let items = new Array(0)
   for (let id = 0; id<items_.length; id++) {
@@ -13,15 +14,11 @@ export default function ItemsPage({ language }) {
       "description": items_[id].title_map[language].description
     })
   }
-  let base_url = (
-      import.meta.env.VITE_BACKEND_PROTOCOL +
-      import.meta.env.VITE_BACKEND_HOST + ":" +
-      import.meta.env.VITE_BACKEND_PORT
-  )
+
   return (
     <main id={ "items" }>
       <div className="items">
-        <ItemsList items_list={items} base_url={base_url}/>
+        <ItemsList items_list={items} base_url={data_api.url}/>
       </div>
     </main>
   )
