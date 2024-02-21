@@ -1,5 +1,12 @@
-:root {
-    --base-img-size: 200px;
+@media screen and (min-width: 540px){
+    :root {
+        --base-img-size: 200px;
+    }
+}
+@media screen and (max-width: 540px) {
+    :root {
+        --base-img-size: 75px;
+    }
 }
 
 .item__box {
@@ -11,9 +18,6 @@
     border-radius: 10px;
 
     .item__image {
-        width: var(--base-img-size);
-        height: var(--base-img-size);
-
         img {
             width: var(--base-img-size);
         }

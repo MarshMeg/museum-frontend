@@ -13,11 +13,15 @@ export default function ItemsPage({ language }) {
       "description": items_[id].title_map[language].description
     })
   }
-
+  let base_url = (
+      import.meta.env.VITE_BACKEND_PROTOCOL +
+      import.meta.env.VITE_BACKEND_HOST + ":" +
+      import.meta.env.VITE_BACKEND_PORT
+  )
   return (
     <main id={ "items" }>
       <div className="items">
-        <ItemsList items_list={items}/>
+        <ItemsList items_list={items} base_url={base_url}/>
       </div>
     </main>
   )

@@ -9,7 +9,8 @@ header {
 	
 	width: 100%;
 	height: var(--header-base-height);
-	
+
+	background-color: var(--bg-color);
 }
 
 main {

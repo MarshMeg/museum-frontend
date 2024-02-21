@@ -1,10 +1,8 @@
 import API from "./API.js";
 
 export default class DataAPI extends API {
-  constructor(
-    is_secure, config_file_path
-  ) {
-    super(is_secure, config_file_path);
+  constructor() {
+    super();
     this.url = this.url + "data/"
   }
 

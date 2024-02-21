@@ -1,11 +1,8 @@
 import API from "./API.js";
 
 export default class AccountAPI extends API {
-  constructor(
-    is_secure = false,
-    config_file_path = './meta.json'
-  ) {
-    super(is_secure, config_file_path);
+  constructor() {
+    super()
     this.url = this.url + "account/"
   }
 

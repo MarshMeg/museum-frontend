@@ -24,6 +24,7 @@ a:hover {
 body {
     margin: 0;
     min-width: 100vw;
+    overflow-x: hidden;
 }
 
 button {
