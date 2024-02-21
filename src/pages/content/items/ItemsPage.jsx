@@ -18,7 +18,7 @@ export default function ItemsPage({ language }) {
   return (
     <main id={ "items" }>
       <div className="items">
-        <ItemsList items_list={items} base_url={data_api.url}/>
+        <ItemsList items_list={items} base_url={data_api.url.replace('api/data/', '')}/>
       </div>
     </main>
   )
