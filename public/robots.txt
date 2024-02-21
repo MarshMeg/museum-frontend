@@ -1,0 +1,6 @@
+User-agent: *
+Crawl-delay: 60
+Host: zavschoolmuseum.netlify.app
+Disallow: /admin/
+Sitemap: https://zavschoolmuseum.netlify.app/sitemap.xml
+
