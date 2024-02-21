@@ -4,7 +4,6 @@ import "./App.css"
 
 
 export default function App() {
-  console.log(import.meta.env)
   return (
     <>
       <Routes>
