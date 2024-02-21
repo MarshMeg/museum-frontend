@@ -3,12 +3,8 @@ import BasePage from "./pages/BasePage.jsx";
 import "./App.css"
 
 
-function Redirect({ url }) {
-  window.location.host = url
-}
-
-
 export default function App() {
+  console.log(import.meta.env)
   return (
     <>
       <Routes>
